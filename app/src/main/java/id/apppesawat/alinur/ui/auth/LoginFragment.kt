@@ -1,10 +1,13 @@
 package id.apppesawat.alinur.ui.auth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import id.apppesawat.alinur.R
 import id.apppesawat.alinur.data.repository.AuthRepository
@@ -39,7 +42,15 @@ class LoginFragment : Fragment() {
 
     private fun observe() {
         viewModel.authLogin.observe(viewLifecycleOwner){
-            if (it.isConsumed)
+            if (it.isConsumed){
+                Log.i("login", "IsConsumed")
+            }else if (!it.isSuccess){
+                Toast.makeText(parent,it.message, Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(parent, it.message, Toast.LENGTH_SHORT).show()
+                parent.onSuccess(it.data)
+            }
+            it.isConsumed
         }
     }
 

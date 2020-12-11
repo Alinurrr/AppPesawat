@@ -1,11 +1,13 @@
 package id.apppesawat.alinur.ui.auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import id.apppesawat.alinur.R
 import id.apppesawat.alinur.data.model.AuthUser
 import id.apppesawat.alinur.databinding.ActivityAuthBinding
+import id.apppesawat.alinur.ui.home.MainActivity
 
 class AuthActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthBinding
@@ -15,8 +17,8 @@ class AuthActivity : AppCompatActivity() {
     }
 
     fun onSuccess(user: AuthUser?){
-//        val intent = Intent( this, MainActivity::class.java)
-//        startActivity(intent)
-//        finish()
+        val intent = Intent( this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

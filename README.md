@@ -1,5 +1,5 @@
 # AppPesawat
-Aplikasi Mobile Dasar Menggunakan Bahasa Kotlin
+Aplikasi Mobile Sederhana Menggunakan Bahasa Kotlin
 <br>
 Nama : Ali Nur Rachman
 <br>

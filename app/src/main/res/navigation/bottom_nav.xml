@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="id.apppesawat.alinur.ui.home.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_mangaFragment"
+            app:destination="@id/mangaFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="id.apppesawat.alinur.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite2"
+        tools:layout="@layout/fragment_favorite2" />
+    <fragment
+        android:id="@+id/mangaFragment"
+        android:name="id.apppesawat.alinur.ui.manga.MangaFragment"
+        android:label="fragment_manga"
+        tools:layout="@layout/fragment_manga" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="id.apppesawat.alinur.ui.profile.ProfileFragment"
+        android:label="fragment_profile2"
+        tools:layout="@layout/fragment_profile2" />
+</navigation>

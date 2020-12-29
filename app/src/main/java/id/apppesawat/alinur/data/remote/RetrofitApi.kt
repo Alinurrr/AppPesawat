@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitApi {
-    const val MANGA_URL = "https://mangamint.kaedenoki.net/api/manga/page/1"
+    const val MANGA_URL = "https://mangamint.kaedenoki.net"
     private val client = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY

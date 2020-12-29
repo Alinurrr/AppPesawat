@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface MangaService {
-    @GET("/")
+    @GET("/api/manga/page/1")
     fun listManga() : Call<MangaList>
 
     @GET("detail/")
